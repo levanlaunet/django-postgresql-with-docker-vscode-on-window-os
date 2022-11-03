@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=your_db
+      - POSTGRES_USER=your_user
+      - POSTGRES_PASSWORD=your_password
+    ports:
+      - "5433:5432"  
+  web:         
+    build: 
+      context: .
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: mywebsite 
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ./app:/app 
+    environment:
+      - DB_HOST=db
+      - DB_NAME=your_db
+      - DB_USER=your_user
+      - DB_PASS=your_password
+    
