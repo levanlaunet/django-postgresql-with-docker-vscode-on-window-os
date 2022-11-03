@@ -1,2 +1,3 @@
-# django-postgresql-with-docker-vscode-on-window-os
-Django, PostgreSql with Docker, VScode on Window OS
+# Django, PostgreSql with Docker, VScode on Window OS
+
+### Blog : https://levanlau.net
