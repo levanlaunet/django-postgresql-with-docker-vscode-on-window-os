@@ -1,3 +1,4 @@
 # Django, PostgreSql with Docker, VScode on Window OS
 
-### Blog : https://levanlau.net
+### Youtube video: https://youtu.be/-hkwqj2SP24
+### Blog: https://levanlau.net
